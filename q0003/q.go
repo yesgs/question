@@ -11,9 +11,9 @@ func lengthOfLongestSubstring(s string) int {
 	var indexMap = make(map[byte]int)
 
 	for right < length {
-		//如果右边发现重复的，将左边的窗口挪到当前元素上一次出现的位置后面
 		ch := s[right]
 
+		//如果右边发现重复的，将左边的窗口挪到当前元素上一次出现的位置后面
 		if i, ok := indexMap[ch]; ok {
 			left = common.Max(i+1, left) //遇到 abba 这种，确保左边界不会回拨
 		}
