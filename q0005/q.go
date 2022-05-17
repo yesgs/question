@@ -1,11 +1,23 @@
 package q0005
 
+//给你一个字符串 s，找到 s 中最长的回文子串。
+
+//示例 1：
+//
+//输入：s = "babad"
+//输出："bab"
+//解释："aba" 同样是符合题意的答案。
+//示例 2：
+//
+//输入：s = "cbbd"
+//输出："bb"
+
 func longestPalindrome(s string) string {
 	if len(s) < 2 {
 		return s
 	}
-	//babad
 
+	//遍历原始字符串的每一个字符
 	res := ""
 	for i := 0; i < len(s); i++ {
 		odd := maxPalindrome(s, i, i)    //找出奇数长度的回文串，即找到以 s[i] 为中心的回文串
