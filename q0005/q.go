@@ -38,7 +38,8 @@ func longestPalindrome(s string) string {
 func maxPalindrome(s string, left, right int) []int {
 	length := len(s)
 	for left >= 0 && right < length {
-		//偶数长度 中间两个必相等
+		//偶数长度 中间两个必须相等
+		//奇数长度 中间点只有一个
 		if s[left] == s[right] {
 			left--
 			right++

@@ -35,10 +35,12 @@ func lengthOfLongestSubstring(s string) int {
 
 		//如果右边发现重复的，将左边的窗口挪到当前元素上一次出现的位置后面
 		if i, ok := indexMap[ch]; ok {
-			left = common.Max(i+1, left) //遇到 abba 这种，确保左边界不会回拨
+			left = common.Max(i+1, left)
+			//遇到 abba 这种，确保左边界不会回拨
+			//当左边界走到第二个b时，下一步判断a，a在b前面，就不要回去了
 		}
 
-		ret = common.Max(ret, right-left+1)
+		ret = common.Max(ret, right-left+1) //取最大值
 		indexMap[ch] = right
 		right++
 	}
