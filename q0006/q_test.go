@@ -14,14 +14,15 @@ func TestQ0006Convert(t *testing.T) {
 	inputs = append(inputs, common.Input1StringInput2IntOutputString{Input1: "A", Input2: 1, Output: "A"})
 	inputs = append(inputs, common.Input1StringInput2IntOutputString{Input1: "LEETCODE", Input2: 3, Output: "LCETOEED"})
 	inputs = append(inputs, common.Input1StringInput2IntOutputString{Input1: "LALALADEMAXIYA", Input2: 4, Output: "LDYAAEIALLMXAA"})
+	inputs = append(inputs, common.Input1StringInput2IntOutputString{Input1: "LEETCODE", Input2: 4, Output: "LDEOEECT"})
 
 	for _, input := range inputs {
 		ret := q0006Convert(input.Input1, input.Input2)
 		msg := fmt.Sprintf("输入 %v 期望 %v 实际 %v", fmt.Sprintf("(%v,%v)", input.Input1, input.Input2), input.Output, ret)
 		if ret != input.Output {
-			t.Error(msg)
+			t.Error("[FAIL]" + msg)
 		} else {
-			t.Log(msg)
+			t.Log("[OK]" + msg)
 		}
 	}
 }
