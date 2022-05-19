@@ -21,7 +21,7 @@ func Min(a, b int) int {
 
 func AssertEqual(t *testing.T, input, output, ret interface{}) {
 	msg := fmt.Sprintf("输入 %v 期望 %v 实际 %v", input, output, ret)
-	if ret != input {
+	if ret != output {
 		t.Error(msg)
 	} else {
 		t.Log(msg)

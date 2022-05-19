@@ -1,5 +1,10 @@
 package common
 
+type InputIntOutputInt struct {
+	Input  int
+	Output int
+}
+
 type InputStringOutputInt struct {
 	Input  string
 	Output int
