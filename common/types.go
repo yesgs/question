@@ -5,6 +5,11 @@ type InputIntOutputInt struct {
 	Output int
 }
 
+type InputIntOutputBool struct {
+	Input  int
+	Output bool
+}
+
 type Input1IntSliceInput2IntSliceOutputIntSlice struct {
 	Input1 []int
 	Input2 []int
