@@ -10,6 +10,11 @@ type InputIntOutputBool struct {
 	Output bool
 }
 
+type InputIntOutputString struct {
+	Input  int
+	Output string
+}
+
 type Input1IntSliceInput2IntSliceOutputIntSlice struct {
 	Input1 []int
 	Input2 []int
