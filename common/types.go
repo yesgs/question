@@ -41,3 +41,8 @@ type Input1StringInput2IntOutputString struct {
 	Input2 int
 	Output string
 }
+
+type InputStringSliceOutputString struct {
+	Input  []string
+	Output string
+}
