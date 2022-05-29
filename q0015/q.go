@@ -23,12 +23,13 @@ import (
 func threeSum(nums []int) [][]int {
 	var ret [][]int
 	var s = 0
+	i, j, k := 0, 0, 0
 
 	//先排序
 	sort.Ints(nums)
 
 	//-4 -1 -1 0 1 2
-	for k := 0; k < len(nums); k++ {
+	for k = 0; k < len(nums); k++ {
 		//当 nums[k] > 0 时直接break跳出
 		//因为 nums[j] >= nums[i] >= nums[k] > 0
 		//即 3 个数字都大于 0 ，在此固定指针 k 之后不可能再找到结果了
@@ -49,10 +50,10 @@ func threeSum(nums []int) [][]int {
 		//当s > 0时，j = j - 1并跳过所有重复的nums[j]；
 		//当s == 0时，记录组合[k, i, j]至res，执行i += 1和j -= 1并跳过所有重复的nums[i]和nums[j]，防止记录到重复组合。
 
-		i := k + 1
-		j := len(nums) - 1
+		i = k + 1
+		j = len(nums) - 1
 		//双指针循环开始
-		for i < len(nums) && j < len(nums) && i < j {
+		for i < j {
 			s = nums[k] + nums[i] + nums[j]
 			if s < 0 {
 				//总和小了 最小的数字稍微调大 i往后挪一个

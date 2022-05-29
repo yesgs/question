@@ -26,6 +26,12 @@ type InputIntSliceOutputInt struct {
 	Output int
 }
 
+type Input1IntSliceInput2IntOutputInt struct {
+	Input1 []int
+	Input2 int
+	Output int
+}
+
 type InputIntSliceOutputIntSliceSlice struct {
 	Input  []int
 	Output [][]int

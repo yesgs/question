@@ -2,7 +2,6 @@ package q0015
 
 import (
 	"fmt"
-	"log"
 	"question/common"
 	"reflect"
 	"testing"
@@ -17,7 +16,6 @@ func TestThreeSum(t *testing.T) {
 
 	for _, input := range inputs {
 		ret := threeSum(input.Input)
-		log.Println(ret)
 
 		msg := fmt.Sprintf("输入 %v 期望 %v 实际 %v", input.Input, input.Output, ret)
 
