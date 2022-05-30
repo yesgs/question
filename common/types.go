@@ -57,3 +57,8 @@ type InputStringSliceOutputString struct {
 	Input  []string
 	Output string
 }
+
+type InputStringOutputStringSlice struct {
+	Input  string
+	Output []string
+}
