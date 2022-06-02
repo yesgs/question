@@ -54,6 +54,11 @@ type InputStringOutputInt struct {
 	Output int
 }
 
+type InputStringOutputBool struct {
+	Input  string
+	Output bool
+}
+
 type InputStringOutputString struct {
 	Input  string
 	Output string
