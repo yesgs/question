@@ -8,11 +8,11 @@ import (
 func TestQ0020isValid(t *testing.T) {
 
 	var inputs []common.InputStringOutputBool
-	//inputs = append(inputs, common.InputStringOutputBool{Input: "()", Output: true})
-	//inputs = append(inputs, common.InputStringOutputBool{Input: "()[]{}", Output: true})
-	//inputs = append(inputs, common.InputStringOutputBool{Input: "(]", Output: false})
-	//inputs = append(inputs, common.InputStringOutputBool{Input: "([)]", Output: false})
-	//inputs = append(inputs, common.InputStringOutputBool{Input: "{[]}", Output: true})
+	inputs = append(inputs, common.InputStringOutputBool{Input: "()", Output: true})
+	inputs = append(inputs, common.InputStringOutputBool{Input: "()[]{}", Output: true})
+	inputs = append(inputs, common.InputStringOutputBool{Input: "(]", Output: false})
+	inputs = append(inputs, common.InputStringOutputBool{Input: "([)]", Output: false})
+	inputs = append(inputs, common.InputStringOutputBool{Input: "{[]}", Output: true})
 	inputs = append(inputs, common.InputStringOutputBool{Input: "){", Output: false})
 
 	for _, input := range inputs {
