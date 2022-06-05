@@ -1,4 +1,6 @@
-package q0023
+package q0024
+
+//两两交换链表中的节点
 
 type ListNode struct {
 	Val  int
