@@ -12,6 +12,7 @@ func TestRemoveDuplicates(t *testing.T) {
 	var inputs []common.InputIntSliceOutputInt
 	inputs = append(inputs, common.InputIntSliceOutputInt{Input: []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}, Output: 5})
 	inputs = append(inputs, common.InputIntSliceOutputInt{Input: []int{1, 1, 1, 1, 1, 2, 2, 3, 3}, Output: 3})
+	inputs = append(inputs, common.InputIntSliceOutputInt{Input: []int{1, 1, 1, 2, 3, 4}, Output: 4})
 
 	for _, input := range inputs {
 		ret := removeDuplicates(input.Input)
