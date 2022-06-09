@@ -85,6 +85,12 @@ type Input1StringInput2IntOutputString struct {
 	Output string
 }
 
+type Input1StringInput2StringOutputInt struct {
+	Input1 string
+	Input2 string
+	Output int
+}
+
 type InputStringSliceOutputString struct {
 	Input  []string
 	Output string
