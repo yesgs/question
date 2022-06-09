@@ -1,22 +1,5 @@
 package q0026
 
-func removeDuplicates2(nums []int) int {
-
-	length := len(nums)
-	if length == 0 {
-		return 0
-	}
-	i := 0
-	for j := 1; j < length; j++ {
-		if nums[j] != nums[i] {
-			i++
-			nums[i] = nums[j]
-		}
-	}
-
-	return i + 1
-}
-
 func removeDuplicates(nums []int) int {
 	// 1 1 1 2 3 4
 	length := len(nums)
